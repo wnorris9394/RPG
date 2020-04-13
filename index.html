@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="interface.css" />
+        <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css" />
+        <title>RPG</title>
+    </head>
+    <body>
+        <div class="sidenav">
+            <a href="#" onClick="screenCombat()">Combat</a>
+            <a href="#" onClick="screenInventory()">Inventory</a>
+            <a href="#" onClick="screenGathering()">Gathering</a>
+            <a href="#" onClick="screenCrafting()">Crafting</a>
+            <a href="#" onClick="screenUpgrades()">Upgrades</a>
+            <a href="#" onClick="screenStats()">Stats</a>
+        </div>
+<!--COMBAT SCREEN-->
+        <div class="combat" id="combat">
+            <div class="col-container">
+                <div class="col" style="background-color:#aaa;">
+                    <div id="charHP">
+                        <div id="charHP_bar">100/100</div>
+                    </div><br>
+                    <center><button onclick="charHP_change(11)">Gain 11 HP</button>
+                    <button onclick="charHP_change(-11)">Lose 11 HP</button></center><br>
+                    Gold: <span id="gold">0</span>
+                </div>
+                <div class="col">
+                    xd
+                </div>
+                <div class="col" style="background-color:#aaa;">
+                    <div id="enemyHP">
+                        <div id="enemyHP_bar">10/10</div>
+                    </div><br>
+                </div>
+            </div>
+        </div>
+<!--INVENTORY SCREEN-->
+        <div class="inventory" id="inventory">
+            Inventory
+        </div>
+<!--GATHERING SCREEN-->
+        <div class="gathering" id="gathering">
+            Gathering
+        </div>
+<!--CRAFTING SCREEN-->
+        <div class="crafting" id="crafting">
+            Crafting
+        </div>
+<!--UPGRADES SCREEN-->
+        <div class="upgrades" id="upgrades">
+            Upgrades
+        </div>
+<!--STATS SCREEN-->
+        <div class="stats" id="stats">
+            Stats
+        </div>
+    <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
