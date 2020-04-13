@@ -17,26 +17,49 @@
         <div class="combat" id="combat">
             <div class="col-container">
                 <div class="col" style="background-color:#aaa;">
+                    <i>Player</i>, <span id="charLvl">Level 1</span>
                     <div id="charHP">
                         <div id="charHP_bar">100/100</div>
                     </div><br>
                     <center><button onclick="charHP_change(11)">Gain 11 HP</button>
                     <button onclick="charHP_change(-11)">Lose 11 HP</button></center><br>
-                    Gold: <span id="gold">0</span>
+                    <div id="exp">
+                       <div id="expBar">0/5</div>
+                    </div>
+                    <center><div id="skillPts">Current Skill Points: 0</div></center>
                 </div>
                 <div class="col">
-                    xd
+                    <center><font color="white">Nothing</font></center>
+                    <center><div id="enemyDeath">You have gained <span id="enemyGold">0</span> gold!</div></center>
                 </div>
                 <div class="col" style="background-color:#aaa;">
+                    Enemy
                     <div id="enemyHP">
-                        <div id="enemyHP_bar">10/10</div>
+                        <div id="enemyHP_bar">0/10</div>
                     </div><br>
+                    <center><button id="fight_enemy1" onClick="fight_enemy1()">Fight</button></center>
+                    <center><button id ="respawn_enemy1"onClick="respawn_enemy1()">Spawn Enemy</button></center><br>
+                </div>
+            </div>
+            <div class="col-container">
+                <div class="col" id="charDeath">
+                    You have died and lost your experience. Idiot. <button onClick="healChar()">Respawn</button>
                 </div>
             </div>
         </div>
 <!--INVENTORY SCREEN-->
         <div class="inventory" id="inventory">
-            Inventory
+            <div class="col-container">
+                <div class="col">
+                    Gold: <span id="invGold">0</span>
+                </div>
+                <div class="col">
+                    
+                </div>
+                <div class="col">
+                    
+                </div>
+            </div>
         </div>
 <!--GATHERING SCREEN-->
         <div class="gathering" id="gathering">
@@ -48,11 +71,35 @@
         </div>
 <!--UPGRADES SCREEN-->
         <div class="upgrades" id="upgrades">
-            Upgrades
+            <div class="col-container">
+                <div class="col">
+                    Skill Points: <span id="upgradesSkillPts">0</span>
+                </div>
+                <div class="col" style="background-color:#aaa;">
+                    Basic Upgrades<br><br>
+                    <button onClick="upgradeMinAtk()">Upgrade Minimum Damage</button> Cost: <span id="upgradesMinAtk_cost">1</span><br><br>
+                    <button onClick="upgradeMaxAtk()">Upgrade Maximum Damage</button> Cost: <span id="upgradesMaxAtk_cost">1</span><br><br>
+                </div>
+                <div class="col">
+                    
+                </div>
+            </div>
         </div>
 <!--STATS SCREEN-->
         <div class="stats" id="stats">
-            Stats
+            <div class="col-container">
+                <div class="col">
+                    Minimum Attack: <span id="statsMinAtk">1</span><br>
+                    Maximum Attack: <span id="statsMaxAtk">5</span><br><br>
+                    Enemies Killed: <span id="statsKilled">0</span>
+                </div>
+                <div class="col">
+                    
+                </div>
+                <div class="col">
+                    
+                </div>
+            </div>
         </div>
     <script type="text/javascript" src="main.js"></script>
     </body>
